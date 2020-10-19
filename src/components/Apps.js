@@ -1,10 +1,17 @@
 import React from "react";
 
+import { BrowserRouter, Route } from "react-router-dom";
+
+const pageOne = () => {
+    return <div>Page One</div>
+}
 
 const App = () => {
     return (
         <div>
-            App
+            <BrowserRouter>
+                <Route path="/" exact component={pageOne} />
+            </BrowserRouter>
         </div>
     )
 }
